@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="Windows_Presentation_Forms_Application.PlayerProfile"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Windows_Presentation_Forms_Application"
+             mc:Ignorable="d" 
+             Height="65" Width="65" Cursor="Hand">
+    <Grid MouseLeftButtonDown="Grid_MouseLeftButtonDown" Loaded="Grid_Loaded" MouseRightButtonDown="Grid_MouseRightButtonDown">
+        <Grid.RenderTransform>
+            <ScaleTransform x:Name="PlayerProfileScaleTransform"/>
+        </Grid.RenderTransform>
+        <Grid.Background>
+            <ImageBrush x:Name="PlayerImage" ImageSource="pack://application:,,,/Resources/default_image.png" Changed="PlayerImage_Changed"/>
+        </Grid.Background>
+        <Label x:Name="ShirtNumber" FontSize="9" Content="lbl" VerticalAlignment="Top" HorizontalAlignment="Left" Background="{x:Null}" FontWeight="Bold" Panel.ZIndex="2" Foreground="White"/>
+        <Label x:Name="PlayerName" FontSize="9" Content="lbl" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontWeight="Bold" Panel.ZIndex="2" Foreground="White"/>
+    </Grid>
+</UserControl>
